@@ -30,7 +30,7 @@ func respondWithError(w http.ResponseWriter, code int, message string) {
 		Error string `json:"error"`
 	}
 
-	if (code > 499) {
+	if code > 499 {
 		log.Printf("Responding with 5xx error: %v", message)
 	}
 
